@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -104,10 +104,10 @@ module.exports =
 
 /***/ }),
 
-/***/ "./components/google-recaptcha.js":
-/*!****************************************!*\
-  !*** ./components/google-recaptcha.js ***!
-  \****************************************/
+/***/ "./components/google-recaptcha.tsx":
+/*!*****************************************!*\
+  !*** ./components/google-recaptcha.tsx ***!
+  \*****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -119,7 +119,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _googeRecaptcha_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./googeRecaptcha.scss */ "./components/googeRecaptcha.scss");
 /* harmony import */ var _googeRecaptcha_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_googeRecaptcha_scss__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "C:\\Users\\Marcela Afonso\\Desktop\\Marcela\\dev\\github_projects\\google-recaptcha\\components\\google-recaptcha.js";
+var _jsxFileName = "C:\\Users\\Marcela Afonso\\Desktop\\Marcela\\dev\\github_projects\\google-recaptcha\\components\\google-recaptcha.tsx";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -127,16 +127,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
- // interface Props {
-//     showButton: any
-// };
+
 
 class GoogleRecaptcha extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  constructor(...args) {
-    super(...args);
+  constructor(props) {
+    super(props);
 
     _defineProperty(this, "loadRecaptcha", () => {
-      grecaptcha.render('form-recaptcha', {
+      window.grecaptcha.render('form-recaptcha', {
         'sitekey': '6LcH0-wUAAAAAK1AC3awIRgj4GBuIU03THxGywfJ',
         'callback': this.getRecaptcha
       });
@@ -198,7 +196,7 @@ class GoogleRecaptcha extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_google_recaptcha__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/google-recaptcha */ "./components/google-recaptcha.js");
+/* harmony import */ var _components_google_recaptcha__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/google-recaptcha */ "./components/google-recaptcha.tsx");
 /* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style */ "./pages/style.tsx");
 var _jsxFileName = "C:\\Users\\Marcela Afonso\\Desktop\\Marcela\\dev\\github_projects\\google-recaptcha\\pages\\index.tsx";
 
@@ -345,7 +343,7 @@ const FieldsetButton = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!*******************************!*\
   !*** multi ./pages/index.tsx ***!
   \*******************************/

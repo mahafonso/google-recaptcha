@@ -3,9 +3,17 @@ import { Component } from 'react';
 
 import './googeRecaptcha.scss';
 
-class GoogleRecaptcha extends Component {
+interface Props {
+    showButton: any
+}
+
+class GoogleRecaptcha extends Component<Props> {
+    constructor(props: Props) {
+        super(props);
+    }
+
     loadRecaptcha = () => {
-        grecaptcha.render('form-recaptcha', {
+        (window as any).grecaptcha.render('form-recaptcha', {
             'sitekey': '6LcH0-wUAAAAAK1AC3awIRgj4GBuIU03THxGywfJ',
             'callback': this.getRecaptcha
         });
