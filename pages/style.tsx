@@ -26,23 +26,8 @@ const SectionForm = styled.form`
 const FormFieldset = styled.fieldset`
     border: none;
     display: inline-block;
-    margin: 10px 0;
     padding: 0;
     width: auto;
-`;
-
-const FieldsetLabel = styled.label`
-    font-size: 18px;
-    font-weight: 400;
-    margin-right: 10px;
-`;
-
-const FieldsetInput = styled.input`
-    background: transparent;
-    border: 1px solid #000;
-    font-size: 18px;
-    outline: none;
-    padding: 5px;
 `;
 
 const FieldsetButton = styled.button`
@@ -70,7 +55,5 @@ export {
     SectionTitle,
     SectionForm,
     FormFieldset,
-    FieldsetLabel,
-    FieldsetInput,
     FieldsetButton
 };

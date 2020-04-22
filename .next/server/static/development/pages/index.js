@@ -93,10 +93,21 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/google-recaptcha.tsx":
-/*!*****************************************!*\
-  !*** ./components/google-recaptcha.tsx ***!
-  \*****************************************/
+/***/ "./components/googeRecaptcha.scss":
+/*!****************************************!*\
+  !*** ./components/googeRecaptcha.scss ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./components/google-recaptcha.js":
+/*!****************************************!*\
+  !*** ./components/google-recaptcha.js ***!
+  \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -104,19 +115,73 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\Marcela Afonso\\Desktop\\Marcela\\dev\\github_projects\\google-recaptcha\\components\\google-recaptcha.tsx";
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _googeRecaptcha_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./googeRecaptcha.scss */ "./components/googeRecaptcha.scss");
+/* harmony import */ var _googeRecaptcha_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_googeRecaptcha_scss__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "C:\\Users\\Marcela Afonso\\Desktop\\Marcela\\dev\\github_projects\\google-recaptcha\\components\\google-recaptcha.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
-const GoogleRecaptcha = () => __jsx("div", {
-  className: "recaptcha__element",
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 2,
-    columnNumber: 5
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+ // interface Props {
+//     showButton: any
+// };
+
+class GoogleRecaptcha extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  constructor(...args) {
+    super(...args);
+
+    _defineProperty(this, "loadRecaptcha", () => {
+      grecaptcha.render('form-recaptcha', {
+        'sitekey': '6LcH0-wUAAAAAK1AC3awIRgj4GBuIU03THxGywfJ',
+        'callback': this.getRecaptcha
+      });
+    });
+
+    _defineProperty(this, "getRecaptcha", () => {
+      this.props.showButton(true);
+    });
   }
-}, "Recaptcha goes here!");
+
+  componentDidMount() {
+    this.loadRecaptcha();
+  }
+
+  render() {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 34,
+        columnNumber: 17
+      }
+    }, __jsx("script", {
+      src: "https://www.google.com/recaptcha/api.js?render=explicit",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35,
+        columnNumber: 21
+      }
+    })), __jsx("div", {
+      id: "form-recaptcha",
+      className: "g-recaptcha",
+      "data-sitekey": "6LcH0-wUAAAAAK1AC3awIRgj4GBuIU03THxGywfJ",
+      "data-callback": "formSubmit",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38,
+        columnNumber: 17
+      }
+    }));
+  }
+
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (GoogleRecaptcha);
 
@@ -133,7 +198,7 @@ const GoogleRecaptcha = () => __jsx("div", {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_google_recaptcha__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/google-recaptcha */ "./components/google-recaptcha.tsx");
+/* harmony import */ var _components_google_recaptcha__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/google-recaptcha */ "./components/google-recaptcha.js");
 /* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style */ "./pages/style.tsx");
 var _jsxFileName = "C:\\Users\\Marcela Afonso\\Desktop\\Marcela\\dev\\github_projects\\google-recaptcha\\pages\\index.tsx";
 
@@ -141,79 +206,73 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const Home = () => __jsx(_style__WEBPACK_IMPORTED_MODULE_2__["GoogleRecaptchaSection"], {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 14,
-    columnNumber: 5
-  }
-}, __jsx(_style__WEBPACK_IMPORTED_MODULE_2__["SectionTitle"], {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 15,
-    columnNumber: 9
-  }
-}, "Google Recaptcha"), __jsx(_style__WEBPACK_IMPORTED_MODULE_2__["SectionForm"], {
-  id: "main__form",
-  onSubmit: formSubmit,
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 17,
-    columnNumber: 9
-  }
-}, __jsx(_style__WEBPACK_IMPORTED_MODULE_2__["FormFieldset"], {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 18,
-    columnNumber: 13
-  }
-}, __jsx(_style__WEBPACK_IMPORTED_MODULE_2__["FieldsetLabel"], {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 19,
-    columnNumber: 17
-  }
-}, "Type your name:"), __jsx(_style__WEBPACK_IMPORTED_MODULE_2__["FieldsetInput"], {
-  name: "name",
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 21,
-    columnNumber: 17
-  }
-})), __jsx(_components_google_recaptcha__WEBPACK_IMPORTED_MODULE_1__["default"], {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 24,
-    columnNumber: 13
-  }
-}), __jsx(_style__WEBPACK_IMPORTED_MODULE_2__["FormFieldset"], {
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 26,
-    columnNumber: 13
-  }
-}, __jsx(_style__WEBPACK_IMPORTED_MODULE_2__["FieldsetButton"], {
-  type: "submit",
-  disabled: true,
-  __self: undefined,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 27,
-    columnNumber: 17
-  }
-}, "Confirm"))));
+
+const Home = () => {
+  const {
+    0: showButton,
+    1: handleShowButton
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  return __jsx(_style__WEBPACK_IMPORTED_MODULE_2__["GoogleRecaptchaSection"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
+      columnNumber: 9
+    }
+  }, __jsx(_style__WEBPACK_IMPORTED_MODULE_2__["SectionTitle"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 13
+    }
+  }, "Google Recaptcha"), __jsx(_style__WEBPACK_IMPORTED_MODULE_2__["SectionForm"], {
+    id: "main__form",
+    onSubmit: formSubmit,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 13
+    }
+  }, __jsx(_components_google_recaptcha__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    showButton: handleShowButton,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 17
+    }
+  }), __jsx(_style__WEBPACK_IMPORTED_MODULE_2__["FormFieldset"], {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 17
+    }
+  }, !showButton && __jsx(_style__WEBPACK_IMPORTED_MODULE_2__["FieldsetButton"], {
+    type: "submit",
+    disabled: true,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25,
+      columnNumber: 37
+    }
+  }, "Confirm"), showButton && __jsx(_style__WEBPACK_IMPORTED_MODULE_2__["FieldsetButton"], {
+    type: "submit",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 36
+    }
+  }, "Confirm"))));
+};
 
 const formSubmit = event => {
   event.preventDefault();
-  const name = event.target.elements.name.value;
+  alert('Sent!');
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
@@ -224,7 +283,7 @@ const formSubmit = event => {
 /*!*************************!*\
   !*** ./pages/style.tsx ***!
   \*************************/
-/*! exports provided: GoogleRecaptchaSection, SectionTitle, SectionForm, FormFieldset, FieldsetLabel, FieldsetInput, FieldsetButton */
+/*! exports provided: GoogleRecaptchaSection, SectionTitle, SectionForm, FormFieldset, FieldsetButton */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -233,8 +292,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionTitle", function() { return SectionTitle; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SectionForm", function() { return SectionForm; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormFieldset", function() { return FormFieldset; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FieldsetLabel", function() { return FieldsetLabel; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FieldsetInput", function() { return FieldsetInput; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FieldsetButton", function() { return FieldsetButton; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
@@ -262,21 +319,8 @@ const SectionForm = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.for
 const FormFieldset = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.fieldset`
     border: none;
     display: inline-block;
-    margin: 10px 0;
     padding: 0;
     width: auto;
-`;
-const FieldsetLabel = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.label`
-    font-size: 18px;
-    font-weight: 400;
-    margin-right: 10px;
-`;
-const FieldsetInput = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.input`
-    background: transparent;
-    border: 1px solid #000;
-    font-size: 18px;
-    outline: none;
-    padding: 5px;
 `;
 const FieldsetButton = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button`
     background: #000;
@@ -310,6 +354,17 @@ const FieldsetButton = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.
 
 module.exports = __webpack_require__(/*! C:\Users\Marcela Afonso\Desktop\Marcela\dev\github_projects\google-recaptcha\pages\index.tsx */"./pages/index.tsx");
 
+
+/***/ }),
+
+/***/ "next/head":
+/*!****************************!*\
+  !*** external "next/head" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
 
 /***/ }),
 

@@ -5,35 +5,36 @@ import {
     SectionTitle,
     SectionForm,
     FormFieldset,
-    FieldsetLabel,
-    FieldsetInput,
     FieldsetButton
 } from './style';
+import { useState } from 'react';
 
-const Home = () => (
-    <GoogleRecaptchaSection>
-        <SectionTitle>Google Recaptcha</SectionTitle>
+const Home = () => {
+    const [showButton, handleShowButton] = useState(false);
 
-        <SectionForm id="main__form" onSubmit={formSubmit}>
-            <FormFieldset>
-                <FieldsetLabel>Type your name:</FieldsetLabel>
+    return (
+        <GoogleRecaptchaSection>
+            <SectionTitle>Google Recaptcha</SectionTitle>
 
-                <FieldsetInput name="name" />
-            </FormFieldset>
+            <SectionForm id="main__form" onSubmit={formSubmit}>
+                <GoogleRecaptcha
+                    showButton={handleShowButton}
+                />
 
-            <GoogleRecaptcha />
+                <FormFieldset>
+                    {!showButton && <FieldsetButton type="submit" disabled>Confirm</FieldsetButton>}
 
-            <FormFieldset>
-                <FieldsetButton type="submit" disabled>Confirm</FieldsetButton>
-            </FormFieldset>
-        </SectionForm>
-    </GoogleRecaptchaSection>
-)
+                    {showButton && <FieldsetButton type="submit">Confirm</FieldsetButton>}
+                </FormFieldset>
+            </SectionForm>
+        </GoogleRecaptchaSection>
+    );
+}
 
 const formSubmit = event => {
     event.preventDefault();
 
-    const name = event.target.elements.name.value;
+    alert('Sent!');
 }
 
 export default Home
